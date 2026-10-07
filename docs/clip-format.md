@@ -58,3 +58,8 @@ maps `(x, y, z) -> (x, -y, -z)` (y up, avatar faces `+z`).
 
 `backend/app/static/letters/{asl,isl}/<LETTER>.json` are one-frame clips served at
 `/static/letters/{lang}/<LETTER>.json`.
+
+## Fingerspell API
+
+`POST /fingerspell` returns `letters: [{char, clip_url, pause}]`. A word boundary is
+`{"char": " ", "clip_url": null, "pause": true}`; players hold the neutral pose (~300 ms) for it.
